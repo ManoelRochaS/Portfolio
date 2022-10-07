@@ -1,0 +1,215 @@
+
+/*Configurações Gerais*/
+*{
+    border: 0px;
+    margin: 0px;
+}
+body{
+    background-image: linear-gradient(to bottom right,#042d5f, #000000);
+    background-position: center;
+    background-size:cover;
+    color: white;
+    font-family: Urbanist;
+}
+
+    /*Configurações De carregamento*/
+    #Loading{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+        right: 0;
+        background-image: linear-gradient(to bottom right,#042d5f, #000000);
+    }
+        #Loading .central{
+            background-image: linear-gradient(to bottom right,#042d5f, #000000);
+            width: 20vh;
+            padding: 12.5vh;
+            border-radius: 45vh;
+            border:0.5vh white solid;
+        }
+        #Loading #imgRotate{
+            width: 20vh;
+        }
+
+    /*Configurações de Cabeçalho*/
+    header{
+        width: 100%;
+        height: 10vh;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+        header .navMenu{
+            display: none;
+        }
+            header .navMenu .menuClosed{
+                background-image: url(./photoGallery/IconsLoading/menuOpen.png);
+            }
+            header .navMenu .menuOpen{
+                background-image: url(./photoGallery/IconsLoading/menuClose.png);
+            }
+        header .navLeft{
+            display: flex;
+            justify-content: space-around;
+            width: 35%;
+            margin-left: 5%;
+        }
+            header .navLeft a{
+                color: white;
+                width: 25%;
+                border: 0.3vh solid transparent;
+                text-decoration: none;
+                font-size: 1.2vw;
+                padding: 1vh 0%;
+                text-align: center;
+
+            }
+            header .navLeft a:hover{
+                color: rgba(255, 255, 255, 0.158);
+            }
+            header .navLeft .currentLink{
+                border-bottom-color: white;
+            }
+            header .navLeft .currentLink:hover{
+                border-bottom-color: rgba(255, 255, 255, 0.158);
+            }
+        header .navRight{
+            width: 10%;
+            margin-right: 5%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+            header .navRight a{
+                height: 5vh;
+                width: 5vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+                header .navRight a img{
+                    height: 5vh;
+                }
+
+@media all and (orientation: portrait){
+/*Configurações Gerais*/
+    /*Configurações De carregamento*/
+    #Loading .central{
+        width: 25vw;
+        padding: 12.5vw;
+        border-radius: 50vw;
+        border:1vw white solid;
+    }
+    #Loading #imgRotate{
+        width: 25vw;
+    }
+    /*Configurações de Cabeçalho*/
+        header .navMenu{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 10vh;
+            width: 30%;
+            font-family: Anurati;
+            font-size: 2vh;
+        }
+            header .navMenu p{
+                width: 6vh;
+                height: 6vh;
+                border-radius: 6vh;
+                background-position: center;
+                background-size: cover;
+                transition: all 1s linear;
+            }
+        header .navLeft{
+            position: absolute;
+            top: 10vh;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            width: calc(100% - 0.4vh);
+            height: 59.6vh;
+            margin-left: 0%;
+            background-color: white;
+            border: 0.2vh solid #042d5f;
+        }
+            header .navLeft a{
+                color: #042d5f;
+                width: 60%;
+                font-size: 3vh;
+                font-weight: bold;
+
+            }
+            header .navLeft a:hover{
+                color: rgba(255, 255, 255, 0.158);
+            }
+            header .navLeft .currentLink{
+                background-color: #000000;
+                color: white;
+                border-bottom-color: transparent;
+            }
+        header .navRight{
+            background-color: white;
+            width: calc(100% - 0.4vh);
+            height: 20vh;
+            margin-right: 0%;
+            position: absolute;
+            top: 70vh;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            border: 0.2vh solid #042d5f;
+            border-top: 0vh solid transparent;
+        }
+        header .CONTROL{
+            display: none;
+        }
+                header .navRight a img{
+                    background-color: #042d5f;
+                    padding: 0.5vh;
+                    border-radius: 6vh;
+                }
+
+}
+
+@keyframes loadingAction {
+    0%{
+        rotate: 0deg;
+        opacity: 1;
+    }
+    20%{
+        rotate: 0deg;
+        opacity: 1;
+    }
+    40%{
+        rotate: 0deg;
+        opacity: 0.7;
+    }
+    45%{
+        rotate: 0deg;
+        opacity: 0;
+        display: none;
+    }
+    100%{
+        rotate: 0deg;
+        opacity: 0;
+        display: none;
+    }
+}
+
+/*Definção de Fonte Geral*/
+@font-face {
+    font-family: Urbanist;
+    src: url(./fontText/Urbanist.ttf);
+}
+/*Definição da fonte do Logo*/
+@font-face {
+    font-family: Anurati;
+    src: url(./fontText/Anurati-Regular.otf);
+}

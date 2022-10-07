@@ -1,0 +1,212 @@
+
+/*Configuração do Corpo apresentado*/
+main{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+}
+    /*Configuraçõa da Página Inicial*/
+    main #DisplayOne{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 90vh;
+        transition: all 500ms;
+    }
+        main #DisplayOne .landscape{
+            font-size: 8vw;
+            padding: 2vh;
+            font-family: Anurati;
+        }   
+        main #DisplayOne .portrait{
+            display: none;
+        }
+        main #DisplayOne h2{
+            font-size: 3vw;
+            padding: 2vh;
+        }
+        main #DisplayOne h3{
+            font-size: 2vw;
+            margin-top: 2vh;
+            padding: 2vh;
+            border: 0.2vh solid transparent;
+            transition: all 2s;
+        }
+        main #DisplayOne h3:hover{
+            animation: edit 4s infinite;
+            border: 0.2vh solid #000000;
+        }
+    /*Configuraçõa da Página Secundaria*/
+    main #DisplayTwo{
+        display: flex;
+        flex-flow: row wrap;
+        position: relative;
+        width: 100%;
+        height: 90vh;
+        display: none;
+    }
+        main #DisplayTwo .Sobre{
+            height: 42vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items:flex-start;
+            padding-top: 3vh;
+        }
+        main #DisplayTwo .Projetos{
+            height: 45vh;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main #DisplayTwo .Contato{            
+            height: 45vh;
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        main #DisplayTwo .Central{
+            width: 45vh;
+            height: 45vh;
+            top: calc((80vh - 46vh)/2);
+            left: calc((100% - 46vh)/2);
+            border-radius: 45vh;
+            border: 0.5vh white solid;
+            background-image: linear-gradient(to bottom right,#042d5f, #000000);
+            position: absolute;
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+            main #DisplayTwo img{
+                width: 20vh;
+            }
+            main #DisplayTwo a{
+                text-decoration: none;
+                color: white;
+                font-size: 2vw;
+                width: 10vw;
+                text-align: center;
+                padding: 2vh;
+                border: solid 0.2vh transparent;
+                transition: all 0.7s;
+            }
+            main #DisplayTwo a:hover{
+                background-color: #000000;
+                border: solid 0.2vh white;
+            }
+
+
+@media all and (orientation: portrait){
+/*Configuração do Corpo apresentado*/
+    /*Configuraçõa da Página Inicial*/
+        main #DisplayOne .landscape{
+            display: none;
+        }   
+        main #DisplayOne .portrait{
+            font-size: 32vw;
+            padding: 2vh;
+            font-family: Anurati;
+            display: flex;
+        }
+        main #DisplayOne h2{
+            font-size: 6vw;
+            padding: 2vh;
+        }
+        main #DisplayOne h3{
+            font-size: 4vw;
+            margin-top: 2vh;
+            padding: 2vh;
+        }
+        main .ADD{
+            color: white;
+        }
+        main .REMOVE{
+            color: transparent;
+        }
+        main .DisplayConfigure{
+            display: none;
+        }
+    /*Configuraçõa da Página Secundaria*/
+    main #DisplayTwo{
+        display: flex;
+        flex-flow: row wrap;
+        position: relative;
+        width: 100%;
+        height: 90vh;
+        display: none;
+    }
+        main #DisplayTwo .Sobre{
+            height: 40vh;
+            width: 100%;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: start;
+            align-items: center;
+            padding-top: 5vh;
+        }
+        main #DisplayTwo .Projetos{
+            height: 23vh;
+            padding-bottom: 12vh;
+            width: 50%;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: end;
+            align-items: center;
+        }
+        main #DisplayTwo .Contato{            
+            height: 23vh;
+            padding-bottom: 12vh;
+            width: 50%;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: end;
+            align-items: center;
+        }
+        main #DisplayTwo .Central{
+            width: 50vw;
+            height: 50vw;
+            top: calc((80vh - 52vw)/2);
+            left: calc((100% - 52vw)/2);
+            border-radius: 50vw;
+            border: 1vw white solid;
+        }
+            main #DisplayTwo img{
+                width: 25vw;
+            }
+            main #DisplayTwo a{
+                font-size: 7vw;
+                font-weight: 200;
+                width: 25vw;
+                text-align: center;
+                padding: 2vh;
+                border: solid 1vh transparent;
+            }
+            main #DisplayTwo a:hover{
+                border: solid 1vw white;
+            }
+}
+
+/*Definição das animações*/
+@keyframes edit{
+    0%{
+        background-color: transparent;
+    }
+    100%{
+        background-color: #000000;
+    }
+}
+
+/*Definição da fonte do Logo*/
+@font-face {
+    font-family: Anurati;
+    src: url(./fontText/Anurati-Regular.otf);
+}

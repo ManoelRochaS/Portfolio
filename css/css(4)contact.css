@@ -1,0 +1,231 @@
+
+/*Configuração do Corpo apresentado*/
+main{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+}
+    main .ContactLinks{
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+        main .DisplayTop{
+            width: 40%;
+            height: 45vh;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-evenly;
+        }
+            main .DisplayTop h1{
+                font-size: 2vw;
+                padding: 1vh;
+            }
+        main .DisplayBottom{
+            width: 40%;
+            height: 45vh;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+            .DisplayBottom a{
+                text-decoration: none;
+                color: white;
+            }
+            main .Box{
+                height: 8vh;
+                width: 30%;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+                main .Box img{
+                    height: 5vh;
+                }
+                main .Box p{
+                    font-size: 1vw;
+                    text-align: center;
+                    padding: 0vh 5%;
+                }
+            main .MediaSocial{
+                height: 8vh;
+                width: 30%;
+                display: flex;                
+                flex-flow: column wrap;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+                main .MediaSocial img{
+                    height: 5vh;
+                }
+                main .MediaSocial p{
+                    font-size: 1vw;
+                    text-align: center;
+                    padding: 0vh 5%;
+                }
+            main .Title{
+                width: 100%;
+                padding: 1vh;
+                font-size: 1.5vw;
+                text-align: center;
+            }
+/*    main .ContactForm{
+        width: 50%;
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2vw;
+        display: none;
+    }
+        .ContactForm fieldset{
+            height: 80vh;
+            width: 60vh;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: center;
+            align-items: center;
+            border: 0.3vh solid white;
+            border-radius: 1vh;
+        }
+            .ContactForm fieldset legend{
+                font-size: 1.2vw;
+                padding: 0vh 5%;
+            }
+            .ContactForm fieldset p{
+                width: 30vh;
+                padding: 2vh;
+                margin-right: 26vh;
+            }
+            .ContactForm fieldset input{
+                width: 60vh;
+                padding: 1vh;
+                border-radius: 1vh;
+                font-size: 1.2vw;
+            }
+            .ContactForm fieldset textarea{
+                width: 60vh;
+                padding: 1vh;
+                border-radius: 1vh;
+                font-size: 1.2vw;
+            }
+            .ContactForm fieldset .input{
+                height: 20vh;
+            }
+            .ContactForm fieldset .submit{
+                width: 30vh;
+                font-size: 1.2vw;
+            }
+            .ContactForm fieldset .submit:hover{
+                background-color: #000000;
+                color: white;
+                border: 0.2vh solid white;
+                padding: 0.8vh 1vh;
+            }
+*/
+
+@media all and (orientation: portrait){
+/*Configuração do Corpo apresentado*/
+    main{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+    }        
+        main .DisplayConfigure{
+            display: none;
+        }
+        main .ContactLinks{
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        }
+            main .DisplayTop{
+            width: 80%;
+            height: 30vh;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-evenly;
+            }
+                main .DisplayTop h1{
+                font-size: 2.5vh;
+                padding: 1vh;
+                text-align: center;
+                }
+            main .DisplayBottom{
+            width: 80%;
+            height: 30vh;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            }
+                main .Box{
+                height: 10vh;
+                width: 30%;
+                display: flex;
+                flex-flow: column wrap;
+                justify-content: space-evenly;
+                align-items: center;
+                }
+                    main .Box img{
+                    height: 5vh;
+                    }
+                    main .Box p{
+                    font-size: 1.5vh;
+                    text-align: center;
+                    padding: 0vh;
+                    min-height: 3vh;
+                    }
+                main .MediaSocial{
+                height: 10vh;
+                width: 30%;
+                display: flex;                
+                flex-flow: column wrap;
+                justify-content: space-evenly;
+                align-items: center;
+                }
+                    main .MediaSocial img{
+                    height: 5vh;
+                    }
+                    main .MediaSocial p{
+                    font-size: 1.5vh;
+                    text-align: center;
+                    padding: 0vh;
+                    }
+                main .Title{
+                width: 100%;
+                padding: 1vh;
+                font-size: 2.5vh;
+                text-align: center;
+                }
+}
+
+/*Definição das animações*/
+@keyframes edit{
+    0%{
+        background-color: transparent;
+    }
+    100%{
+        background-color: #000000;
+    }
+}
+
+/*Definição da fonte do Logo*/
+@font-face {
+    font-family: Anurati;
+    src: url(./fontText/Anurati-Regular.otf);
+}
