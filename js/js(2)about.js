@@ -1,14 +1,14 @@
 let control = true;
 var st = true;
 
-function Loading(){
+function loading(){
     document.getElementById("central").style.animation = "loadingAction 4s";
     setTimeout(()=>{
         $("#Loading").toggle();
     },2000)
 }
 
-function Menu(){
+function menu(){
     if(st){
         $(".navLeft").removeClass("CONTROL");
         $(".navRight").removeClass("CONTROL");
@@ -23,18 +23,7 @@ function Menu(){
     }
 }
 
-let texts = [
-    "HTML é uma linguagem de marcação utilizada na construção de páginas na Web. Documentos HTML podem ser interpretados por navegadores.",
-    "Cascading Style Sheets é um mecanismo para adicionar estilo a um documento web. O código CSS pode ser aplicado diretamente nas tags ou ficar contido dentro das tags <style>.",
-    "JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma."
-]
-let c = document.getElementById("Text");
-function edit(numero){
-    c.innerText = texts[numero];
-    c.style.textIndent = "7%";
-}
-
-function EDITDISPLAY(numero){
+function editDisplay(numero){
     if(numero==1){
         $("#DisplayOne").addClass("REMOVE");
         $("#DisplayTwo").addClass("ADD").removeClass("REMOVE");
@@ -45,3 +34,13 @@ function EDITDISPLAY(numero){
     }
 }
 
+let texts = [
+    "HTML é uma linguagem de marcação utilizada na construção de páginas na Web. Documentos HTML podem ser interpretados por navegadores.",
+    "Cascading Style Sheets é um mecanismo para adicionar estilo a um documento web. O código CSS pode ser aplicado diretamente nas tags ou ficar contido dentro das tags <style>.",
+    "JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma."
+]
+let c = document.getElementById("Text");
+function edit(numero){
+    c.innerText = texts[numero];
+    c.style.textIndent = "7%";
+}

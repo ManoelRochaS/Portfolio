@@ -1,14 +1,14 @@
 let control = true;
 var st = true;
 
-function Loading(){
+function loading(){
     document.getElementById("central").style.animation = "loadingAction 4s";
     setTimeout(()=>{
         $("#Loading").toggle();
     },2000)
 }
 
-function Menu(){
+function menu(){
     if(st){
         $(".navLeft").removeClass("CONTROL");
         $(".navRight").removeClass("CONTROL");

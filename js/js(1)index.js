@@ -1,7 +1,7 @@
 let control = true;
 var st = true;
 
-function Loading(){
+function loading(){
     document.getElementById("central").style.animation = "loadingAction 4s";
     setTimeout(()=>{
         document.getElementById("Loading").style.backgroundImage = "linear-gradient(to bottom right transparent, #042d5f, #000000)";
@@ -9,53 +9,51 @@ function Loading(){
     },2000)
 }
 
-function Menu(){
+function menu(){
     if(st){
         $(".navLeft").removeClass("CONTROL");
         $(".navRight").removeClass("CONTROL");
-        $("p").removeClass("menuClosed").addClass("menuOpen");
-        $("h1").removeClass("ADD").addClass("REMOVE");
-        $("h2").removeClass("ADD").addClass("REMOVE");
-        $("h3").removeClass("ADD").addClass("REMOVE");
-        $("a").addClass("DisplayConfigure");
+        $("#DisplayOne").addClass("DisplayConfigure");
+        $("#DisplayTwo").addClass("DisplayConfigure");
         st = false;
     }
     else{
         $(".navLeft").addClass("CONTROL");
         $(".navRight").addClass("CONTROL");
-        $("p").removeClass("menuOpen").addClass("menuClosed");
-        $("h1").removeClass("REMOVE").addClass("ADD");
-        $("h2").removeClass("REMOVE").addClass("ADD");
-        $("h3").removeClass("REMOVE").addClass("ADD");
-        $("a").removeClass("DisplayConfigure");
+        $("#DisplayOne").removeClass("DisplayConfigure");
+        $("#DisplayTwo").removeClass("DisplayConfigure");
         st = true;
     }
 }
 
-$(document).ready(()=>{
-    $("h3").click(()=>{
-        if(control){
-            document.getElementById("DisplayOne").style.color="transparent";
+function editDisplay(numero){
+    if(numero==1){
+        document.getElementById("DisplayOne").style.color="transparent";
+        setTimeout(()=>{
+            $("#DisplayOne").toggle()
+        },2000);
+        setTimeout(()=>{
+            $("#DisplayTwo").toggle(1000)
             setTimeout(()=>{
-                $("#DisplayOne").toggle()
-            },2000);
-            setTimeout(()=>{
-                $("#DisplayTwo").toggle(1000)
-                setTimeout(()=>{
-                    document.getElementById("DisplayTwo").style.display = "flex";
-                },1100)
-            },2500)
-            control = false;
-        }
-    })
-})
+                document.getElementById("DisplayTwo").style.display = "flex";
+            },1100)
+        },2500)
+    }
+    else{
+        document.getElementById("DisplayOne").style.display = "flex";
+        document.getElementById("DisplayOne").style.color = "white";
+        document.getElementById("DisplayTwo").style.display = "none";
+    }
+}
 
-function hoverin(numero){
+
+
+function hoverIn(numero){
     document.getElementsByClassName("Central")[numero].style.opacity = 1;
     document.getElementsByClassName("Central")[numero].style.transition = "all 0.7s linear";
 }
 
-function hoverout(){
+function hoverOut(){
     for(i = 0; i<3; i++){
         document.getElementsByClassName("Central")[i].style.opacity = "0";
     }

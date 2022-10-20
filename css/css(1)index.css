@@ -133,7 +133,7 @@ main{
             color: transparent;
         }
         main .DisplayConfigure{
-            display: none;
+            display: none !important;
         }
     /*Configuraçõa da Página Secundaria*/
     main #DisplayTwo{
